@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blackjack 21 Ace: Free Blackjack Trainer for Android</title>
+<meta name="description" content="Learn blackjack the right way: a strategy coach on every hand, a card counting trainer and 60-second 21 Rush drills. Free on Google Play. 18+, no real money.">
+<meta property="og:title" content="Blackjack 21 Ace: Free Blackjack Trainer">
+<meta property="og:description" content="A strategy coach on every hand, card counting drills and daily challenges. Free on Android.">
+<meta property="og:image" content="https://roni97799.github.io/rba-legal/play/banner.jpg">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg: #062417; --card: #0c3a26; --gold: #ffd24a; --gold2: #d9a020; --text: #f2f5f3; --muted: #b7cbbf; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: radial-gradient(ellipse at top, #0f4a30 0%, var(--bg) 60%); color: var(--text);
+         font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.5; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+  .banner { width: 100%; display: block; border-radius: 0 0 16px 16px; }
+  h1 { font-size: 30px; line-height: 1.15; margin: 22px 0 6px; color: var(--gold); text-align: center; letter-spacing: .5px; }
+  .lead { text-align: center; color: var(--muted); margin: 0 0 20px; }
+  .cta { display: block; width: 100%; max-width: 420px; margin: 0 auto; padding: 16px 20px; border-radius: 14px;
+         background: linear-gradient(180deg, #ffe07a, var(--gold2)); color: #1d1300; font-weight: 800; font-size: 20px;
+         text-align: center; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .cta small { display: block; font-weight: 600; font-size: 13px; opacity: .8; }
+  .ios { display: none; max-width: 420px; margin: 12px auto 0; padding: 12px 14px; border: 1px solid var(--gold2);
+         border-radius: 12px; color: var(--muted); font-size: 14px; text-align: center; }
+  .features { display: grid; gap: 12px; margin: 28px 0; }
+  .f { background: var(--card); border: 1px solid rgba(217,160,32,.35); border-radius: 14px; padding: 14px 16px; }
+  .f b { color: var(--gold); display: block; font-size: 17px; margin-bottom: 2px; }
+  .shots { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .shots img { width: 62%; max-width: 260px; flex: none; border-radius: 12px; scroll-snap-align: center;
+               border: 1px solid rgba(217,160,32,.5); }
+  .bottom { margin-top: 26px; }
+  .legal { margin-top: 28px; font-size: 13px; color: var(--muted); text-align: center; }
+  .legal a { color: var(--muted); }
+</style>
+</head>
+<body>
+<img class="banner" src="banner.jpg" alt="Blackjack 21 Ace" width="1024" height="500">
+<div class="wrap">
+  <h1>Learn blackjack the right way</h1>
+  <p class="lead">A free blackjack trainer for Android. Real casino rules, a coach on every hand, no real money.</p>
+
+  <a class="cta" id="get" href="https://play.google.com/store/apps/details?id=com.rba.royalfelt">
+    Get it on Google Play<small>Free · Android</small>
+  </a>
+  <div class="ios" id="ios">You're on an iPhone. This game is Android only for now; a trainer version for iPhone is on its way.</div>
+
+  <div class="features">
+    <div class="f"><b>Strategy coach</b>The best move lights up on every hand: hit, stand, double, split or surrender. Watch your accuracy grow.</div>
+    <div class="f"><b>Card counting trainer</b>Running count and true count on screen, or hide them and test yourself.</div>
+    <div class="f"><b>21 Rush and the Daily Shoe</b>60 seconds to find the right plays, and one shared shoe for every player each day.</div>
+    <div class="f"><b>Your rules</b>Number of decks, soft 17, double after split, re-split aces. Blackjack pays 3 to 2.</div>
+  </div>
+
+  <div class="shots">
+    <img src="shot-1-real-rules.jpg" alt="Real rules, real wins" loading="lazy">
+    <img src="shot-3-card-counting.jpg" alt="Card counting trainer" loading="lazy">
+    <img src="shot-2-21-rush.jpg" alt="21 Rush" loading="lazy">
+  </div>
+
+  <div class="bottom">
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.rba.royalfelt">Download free on Google Play</a>
+  </div>
+
+  <p class="legal">
+    18+ · For entertainment and practice only · No real money gambling. Chips have no cash value and cannot be bought or exchanged.<br>
+    Made by R.B.A · <a href="../">Terms, privacy and support</a> · r.b.a.app977@gmail.com
+  </p>
+</div>
+<script>
+  // iPhone visitors cannot install the Android game: tell them instead of sending them to a store page they can't use.
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) { document.getElementById('ios').style.display = 'block'; }
+</script>
+</body>
+</html>
