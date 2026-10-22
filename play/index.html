@@ -71,6 +71,11 @@
 <script>
   // iPhone visitors cannot install the Android game: tell them instead of sending them to a store page they can't use.
   if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) { document.getElementById('ios').style.display = 'block'; }
+  // Tell Google Play where the visitor came from, so Play Console can count installs per source.
+  // Plain link = the Meta ad; a bio link adds ?src=instagram_bio, ?src=tiktok_bio, and so on.
+  var src = (new URLSearchParams(location.search).get('src') || 'meta_ad').replace(/[^a-z0-9_]/gi, '');
+  var ref = encodeURIComponent('utm_source=' + src + '&utm_medium=landing_page&utm_campaign=play_page');
+  document.querySelectorAll('a.cta').forEach(function (a) { a.href = 'https://play.google.com/store/apps/details?id=com.rba.royalfelt&referrer=' + ref; });
 </script>
 </body>
 </html>
